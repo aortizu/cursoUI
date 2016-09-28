@@ -1,0 +1,57 @@
+html {
+    background-color: #f1f1f1;
+}
+
+header {
+    padding: 1rem;
+}
+
+footer {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 1rem;
+}
+
+.container {
+    border: 1px solid #D0D0D0;
+    background-color: #ffffff;
+    display: block;
+    max-width: 380px;
+    padding: 15px 35px 45px;
+    margin: 0 auto;
+}
+
+.inputText {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+.section {
+    margin-top: 80px;
+    margin-bottom: 80px;
+}
+
+.inputButton {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+#registro {
+    background-color: #f44336;
+    color: white;
+    padding: 14px 20px;
+    margin-left: 95%;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+}

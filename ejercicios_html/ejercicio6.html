@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+</head>
+
+<body>
+    <h2>Sing up</h2>
+    <form>
+        <ul>
+            <li>
+                <label for="first">First name</label>
+                <input type="text" name="first" id="first" required/>
+            </li>
+            <li>
+                <label for="last">Lats name</label>
+                <input type="text" name="last" id="last" required/>
+            </li>
+            <li>
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" required/>
+            </li>
+            <li>
+                <label for="birthday">Birthday</label>
+                <input type="date" name="birthday" id="id" required/>
+            </li>
+            <li>
+                <label for="sport">Favourite sport</label>
+                <select name="sport" id="sport" required>
+                    <option value></option>
+                    <option value="soccer">Soccer</option>
+                    <option value="basketball">Basketball</option>
+                    <option value="tenis">Tenis</option>
+                </select>
+            </li>
+            <li>
+                <label for="sport">Biography</label>
+                <textarea name="message" rows="10" cols="30" required></textarea>
+            </li>
+        </ul>
+
+        <input type="submit" value="Submit" />
+        <input type="reset" value="Clear" />
+    </form>
+</body>
+
+</html>
