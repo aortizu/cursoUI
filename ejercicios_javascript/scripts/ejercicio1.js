@@ -1,22 +1,16 @@
 var btn = document.querySelector('#button');
 var section = document.querySelector('section');
+var el = document.querySelector('.js-fade');
+var myArr;
 
 document.getElementById("container").onload = function() {
-    load()
+    el.classList.remove('is-paused');
 };
 
 btn.addEventListener('click', function(e) {
     getResponse();
 });
 
-
-var el = document.querySelector('.js-fade');
-
-function load() {
-    el.classList.remove('is-paused');
-}
-
-var myArr;
 
 function getResponse() {
 

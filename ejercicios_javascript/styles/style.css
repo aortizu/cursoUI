@@ -1,5 +1,4 @@
 section {
-    text-align: center;
     width: 100%;
     text-align: center;
     color: #4CAF50;
@@ -8,11 +7,10 @@ section {
     background-color: #D0D0D0;
 }
 
-button {
+#button{
     display: block;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 1rem;
 }
 
 #hidden_section {
@@ -40,4 +38,24 @@ button {
 .is-paused {
     -webkit-animation-play-state: paused;
     animation-play-state: paused;
+}
+
+.error {
+    color: #ff0000;
+    background-color: #0c0c0c;
+}
+
+.rigth {
+    width: 30%;
+    float: right;
+    background: cornflowerblue;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+table, td, th {
+    border: 1px solid black;
+    padding: 1rem;
 }

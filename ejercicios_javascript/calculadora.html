@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="styles/reset.css">
+    <link rel="stylesheet" href="styles/calculadora.css">
+</head>
+
+<body>
+    <form>
+        <div class="container">
+            <h1>Calculator</h1>
+            <div>
+                <input type="number" class="input" id="input1" />
+                <div>
+                    <input type="radio" name="operation" value="plus" id="plus"> +
+                    <input type="radio" name="operation" value="rest" id="rest"> -
+                    <input type="radio" name="operation" value="mult" id="mult"> *
+                    <input type="radio" name="operation" value="divi" id="divi"> /
+                </div>
+                <input type="number" class="input" id="input2" />
+            </div>
+            <button id="equals">=</button>
+            <span id="result">0</span>
+        </div>
+    </form>
+    <script src="scripts/calculadora.js"></script>
+</body>
+
+</html>

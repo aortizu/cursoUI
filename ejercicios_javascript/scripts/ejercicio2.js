@@ -1,48 +1,32 @@
 var btn = document.querySelector('#button');
 var section = document.querySelector('section');
 var serviceUrl = "http://api.icndb.com/jokes/random";
-var promise = fetch(serviceUrl);
-
 
 document.getElementById("container").onload = function() {
-    load()
+    section.classList.remove('is-paused');
 };
 
 btn.addEventListener('click', function(e) {
-    getResponse();
+    callService();
 });
 
-
-var el = document.querySelector('.js-fade');
-
-function load() {
-    el.classList.remove('is-paused');
-}
-
-var myArr;
-
-function getResponse() {
-
-    var xmlhttp = new XMLHttpRequest();
-    var url = "http://api.icndb.com/jokes/random";
-
-    xmlhttp.onreadystatechange = function() {
-        if (this.readyState == 4 && this.status == 200) {
-            myArr = JSON.parse(this.responseText);
-            section.innerHTML = myArr.value.joke;
+function callService() {
+    getJoke(serviceUrl).then(function(data) {
+        if (data.value.joke) {
+            section.innerHTML = data.value.joke;
         }
-    };
-    xmlhttp.open("GET", url, true);
-    xmlhttp.send();
+        else {
+            section.classList.add('error');
+            section.innerHTML = "An error occurred: It broke, service down";
+        }
+
+    }).catch(function(error) {
+        section.classList.add('error');
+        section.innerHTML = "An error occurred: " + error;
+    })
 }
 
-
-
-promise.then(function(data) {
-    section.innerHTML = data.value.joke;
-})
-
-function fetch(url) {
+function getJoke(url) {
 
     return new Promise(function(resolve, reject) {
 
@@ -55,7 +39,7 @@ function fetch(url) {
                     resolve(data);
                 }
                 else {
-                    reject(Error("It broke"));
+                    reject(Error("It broke, service down"));
                 }
             });
     });
